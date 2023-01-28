@@ -115,7 +115,7 @@ textarea {
   }
 
   .description {
-    width: 300px;
+    width: auto;
     height: 100px;
   }
   .hour {
