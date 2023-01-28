@@ -34,6 +34,7 @@ let updateTimeBlockColor = function () {
 // set an interval to update the color of the time blocks every hour
 timeInterval = setInterval(updateTimeBlockColor, 3600000);
 
+// function to save to local storage
 let saveLocal = function (event){
         event.preventDefault()
         var inputID = $(this).parent().attr("id")
