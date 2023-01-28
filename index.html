@@ -18,7 +18,10 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Work Day Scheduler</title>
   </head>
@@ -29,55 +32,59 @@
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
-    <div class="container-fluid">
+    <section class="text-center notification" id="notify">
+        <code>localstorage</code> updated
+    </section>
+    
+    <div class="container">
       <!-- Timeblocks go here -->
-      <div class="row">
+      <form id="9" class="row time-block">
         <div class="hour col-lg-2 col-md-2 col-sm-3">9:00 AM</div>
-        <input class="description col-lg-8 col-md-8 col-sm-6 time-block" data-time="09:00 AM">
-        <div class=" saveBtn col-lg-2 col-md-2 col-sm-3"><i class="fa fa-save"></i></div> 
-      </div>
+        <input class="description col-lg-8 col-md-8 col-sm-6"data-time="09:00 AM">
+        <button class=" col-lg-2 col-md-2 col-sm-3  saveBtn  fa fa-save btn-lg btn-success"></button>
+      </form>
 
-      <div class="row">
+      <form id="10" class="row time-block">
         <div class="hour col-lg-2 col-md-2 col-sm-3">10:00 AM</div>
-        <input class="description col-lg-8 col-md-8 col-sm-6 time-block" data-time="10:00 AM">
-        <div class=" saveBtn col-lg-2 col-md-2 col-sm-3"><i class="fa fa-save"></i></div>
-      </div>
+        <input class="description col-lg-8 col-md-8 col-sm-6"data-time="10:00 AM">
+        <button class="saveBtn col-lg-2 col-md-2 col-sm-3 fa fa-save btn-lg btn-success"></button>
+      </form>
 
-      <div class="row">
+      <form id="11" class="row time-block">
         <div class="hour col-lg-2 col-md-2 col-sm-3">11:00 AM</div>
-        <input class="description col-lg-8 col-md-8 col-sm-6 time-block" data-time="11:00 AM">
-        <div class=" saveBtn col-lg-2 col-md-2 col-sm-3"><i class="fa fa-save"></i></div>
-      </div>
-      <div class="row">
+        <input class="description col-lg-8 col-md-8 col-sm-6"data-time="11:00 AM">
+        <button class="saveBtn col-lg-2 col-md-2 col-sm-3 fa fa-save btn-lg btn-success"></button>
+      </form>
+      <form id="12" class="row time-block">
         <div class="hour col-lg-2 col-md-2 col-sm-3">12 PM</div>
-        <input class="description col-lg-8 col-md-8 col-sm-6 time-block" data-time="12:00 PM">
-        <div class=" saveBtn col-lg-2 col-md-2 col-sm-3"><i class="fa fa-save"></i></div>
-      </div>
-      <div class="row">
+        <input class="description col-lg-8 col-md-8 col-sm-6"data-time="12:00 PM">
+        <button class="saveBtn col-lg-2 col-md-2 col-sm-1 fa fa-save btn-lg btn-success"></button>
+      </form>
+      <form id="13" class="row time-block">
         <div class="hour col-lg-2 col-md-2 col-sm-3">01:00 PM</div>
-        <input class="description col-lg-8 col-md-8 col-sm-6 time-block" data-time="01:00 PM">
-        <div class=" saveBtn col-lg-2 col-md-2 col-sm-3"><i class="fa fa-save"></i></div>
-      </div>
-      <div class="row">
+        <input class="description col-lg-8 col-md-8 col-sm-6"data-time="01:00 PM">
+        <button class="saveBtn col-lg-2 col-md-2 col-sm-3 fa fa-save btn-lg btn-success"></button>
+      </form>
+      <form id="14" class="row time-block">
         <div class="hour col-lg-2 col-md-2 col-sm-3">2:00 PM</div>
-        <input class="description col-lg-8 col-md-8 col-sm-6 time-block" data-time="02:00 PM">
-        <div class=" saveBtn col-lg-2 col-md-2 col-sm-3"><i class="fa fa-save"></i></div>
-      </div>
-      <div class="row">
+        <input class="description col-lg-8 col-md-8 col-sm-6"data-time="02:00 PM">
+        <button class="saveBtn col-lg-2 col-md-2 col-sm-3 fa fa-save btn-lg btn-success"></button>
+      </form>
+      <form id="15" class="row time-block">
         <div class="hour col-lg-2 col-md-2 col-sm-3">03:00 PM</div>
-        <input class="description col-lg-8 col-md-8 col-sm-6 time-block"data-time="03:00 PM">
-        <div class=" saveBtn col-lg-2 col-md-2 col-sm-3"><i class="fa fa-save"></i></div>
-      </div>
-      <div class="row">
+        <input class="description col-lg-8 col-md-8 col-sm-6"data-time="03:00 PM">
+        <button class="saveBtn col-lg-2 col-md-2 col-sm-3 fa fa-save btn-lg btn-success"></button>
+      </form>
+      <form id="16" class="row time-block">
         <div class="hour col-lg-2 col-md-2 col-sm-3">04:00 PM</div>
-        <input class="description col-lg-8 col-md-8 col-sm-6 time-block" data-time="04:00 PM">
-        <div class=" saveBtn col-lg-2 col-md-2 col-sm-3"><i class="fa fa-save"></i></div>
-      </div>
-      <div class="row">
+        <input class="description col-lg-8 col-md-8 col-sm-6"data-time="04:00 PM">
+        <button class="saveBtn col-lg-2 col-md-2 col-sm-3 fa fa-save btn-lg btn-success"></button>
+      </form>
+      <form id="17" class="row time-block">
         <div class="hour col-lg-2 col-md-2 col-sm-3">05:00 PM</div>
-        <input class="description col-lg-8 col-md-8 col-sm-6 time-block" data-time="05:00 PM">
-        <div class=" saveBtn col-lg-2 col-md-2 col-sm-3"><i class="fa fa-save"></i></div>
-      </div>
+        <input class="description col-lg-8 col-md-8 col-sm-6"data-time="05:00 PM">
+        <button class="saveBtn col-lg-2 col-md-2 col-sm-3 fa fa-save btn-lg btn-success"></button>
+      </form>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

@@ -34,7 +34,7 @@ textarea {
   white-space: pre-wrap !important;
   height: 80px !important;
   border-top: 1px solid white !important; 
-  width: 100% !important;
+  justify-content: center !important;
 }
 
 .hour {
@@ -59,15 +59,15 @@ textarea {
   color: white;
 }
 
-.saveBtn {
+.saveBtn, .btnDiv, .deleteBtn {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: #141615;
   color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -76,20 +76,11 @@ textarea {
   transition: all 0.3s ease-in-out;
 }
 
-.container-fluid {
-  border: 2px solid black;
-  margin: 5px;
-  padding: 5px;
+.notification {
+  display: none;
 }
 
-.future {
-  background-color: rgb(122, 231, 177);
-}
-
-.present {
-  background-color: #48b1ee;
-}
-
-.past {
-  background-color: grey;
+.show{
+  display: block;
+  padding: 40px;
 }
