@@ -45,21 +45,19 @@ let saveLocal = function (event){
         $("#notify").append(notifyTimeElement)
         $("#notify").addClass("show")
         
-        setTimeout(function () {$("#notify").removeClass("show")},3000)
-        
-        
+        setTimeout(function () {$("#notify").removeClass("show")},3000)     
     }
 
-updateTimeBlockColor();
-startTime();
+updateTimeBlockColor();  // call update time block function 
+startTime(); // call start time function 
 
 
 // save plans when user click save  
 $(".saveBtn").on("click",saveLocal)
-notifyTimeElement.val("")
+notifyTimeElement.val("") // clear notifcation time 
 
 
-
+// make local storage content persist 
 $("#9").children().eq(1).val(localStorage.getItem("9"))
 $("#10").children().eq(1).val(localStorage.getItem("10"))
 $("#11").children().eq(1).val(localStorage.getItem("11"))
@@ -69,21 +67,5 @@ $("#14").children().eq(1).val(localStorage.getItem("14"))
 $("#15").children().eq(1).val(localStorage.getItem("15"))
 $("#16").children().eq(1).val(localStorage.getItem("16"))
 $("#17").children().eq(1).val(localStorage.getItem("17"))
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 })
