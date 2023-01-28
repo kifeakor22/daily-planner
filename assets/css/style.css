@@ -30,6 +30,12 @@ textarea {
   margin-top: 350px !important;
 }
 
+.howTo {
+  padding: 10px;
+  border-bottom: 2px solid black;
+  text-align: center;
+  font-size: large;
+}
 
 .description {
   white-space: pre-wrap;
