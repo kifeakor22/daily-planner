@@ -2,6 +2,7 @@ $(document).ready(function(){
     let currentDayElement = $("#currentDay")
     let timeInterval;
     let desBlockElement = $(".description")
+    let notifyTimeElement =  $("<p>");
 
 // Get time counting function
     let startTime = function(){
@@ -40,16 +41,23 @@ let saveLocal = function (event){
         var inputID = $(this).parent().attr("id")
         var inputeValue = $(this).siblings(".description").val()
         localStorage.setItem(inputID,inputeValue)
+        notifyTimeElement.addClass("notifyTime").text(`at ${moment().format("HH:mm:ss a")}!`)
+        $("#notify").append(notifyTimeElement)
         $("#notify").addClass("show")
-        setTimeout(function () {
-            $("#notify").removeClass("show")},1500)
-        //$(this).siblings(".description").val("")
+        
+        setTimeout(function () {$("#notify").removeClass("show")},3000)
+        
+        
     }
+
 updateTimeBlockColor();
 startTime();
 
+
 // save plans when user click save  
 $(".saveBtn").on("click",saveLocal)
+notifyTimeElement.val("")
+
 
 
 $("#9").children().eq(1).val(localStorage.getItem("9"))

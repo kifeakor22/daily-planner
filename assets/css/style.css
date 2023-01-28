@@ -15,11 +15,21 @@ textarea {
 
 .jumbotron {
   text-align: center;
-  background-color: transparent;
+  background-color: white;
   color: black;
   border-radius: 0;
   border-bottom: 10px solid black;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  z-index: 100;
 }
+
+.wrapper {
+  margin-top: 350px !important;
+}
+
 
 .description {
   white-space: pre-wrap;
@@ -83,5 +93,32 @@ textarea {
 
 .show{
   display: block;
-  padding: 40px;
+  padding: 20px;
+  color: #1ea11e;
+}
+.notifyTime{
+  color: red;
+  padding: 10px;
+
+}
+
+@media screen and (max-width: 499px) {
+  .saveBtn{
+    width: 40px;
+    height: auto;
+  }
+
+  .description {
+    width: 300px;
+    height: 100px;
+  }
+  .hour {
+    width: 70px;
+  }
+  form {
+    padding: 10px;
+    margin: 30px;
+    
+  }
+
 }
