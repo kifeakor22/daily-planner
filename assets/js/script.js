@@ -1,7 +1,7 @@
 $(document).ready(function(){
     let currentDayElement = $("#currentDay")
     let timeInterval;
-    let desBlockElement = $(".description")
+    let desBlockElement = $(".description") //grab all input fields with class name description 
     let notifyTimeElement =  $("<p>");
 
 // Get time counting function
@@ -16,10 +16,10 @@ $(document).ready(function(){
 
 // update time block colors based on time
 let updateTimeBlockColor = function () {
-    let currentTime = moment();
-    desBlockElement.each(function() {
-        let timeBlockTime = moment($(this).data("time"), "hh:mm a");
-        let nextHour = timeBlockTime.clone().add(1, 'hours');
+    let currentTime = moment(); // current time 
+    desBlockElement.each(function() {   // use for each method on the array called desBlockElements
+        let timeBlockTime = moment($(this).data("time"), "hh:mm a"); // link data-time to real time
+        let nextHour = timeBlockTime.clone().add(1, 'hours'); // clone timeblock current time and add 1 to it to create next hour
         if(currentTime.isBefore(timeBlockTime)) {
             $(this).addClass("future");
         }
@@ -38,8 +38,8 @@ timeInterval = setInterval(updateTimeBlockColor, 3600000);
 // function to save to local storage
 let saveLocal = function (event){
         event.preventDefault()
-        var inputID = $(this).parent().attr("id")
-        var inputeValue = $(this).siblings(".description").val()
+        var inputID = $(this).parent().attr("id") // get the id of the form the save icon is attached to
+        var inputeValue = $(this).siblings(".description").val() // get the value of entered in sibling with class description
         localStorage.setItem(inputID,inputeValue)
         notifyTimeElement.addClass("notifyTime").text(`at ${moment().format("HH:mm:ss a")}!`)
         $("#notify").append(notifyTimeElement)
